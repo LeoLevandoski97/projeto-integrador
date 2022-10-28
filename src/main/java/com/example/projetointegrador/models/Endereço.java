@@ -12,13 +12,17 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Endereço")
+@Table(name = "endereço")
 public class Endereço {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "logradouro")
     private String logradouro;
-    private String numneroCasa;
+    @Column(name = "numeroCasa")
+    private String numeroCasa;
+    @Column(name = "referncia")
     private String referencia;
 
 }

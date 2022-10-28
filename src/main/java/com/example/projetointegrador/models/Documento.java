@@ -12,12 +12,16 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Documento")
+@Table(name = "documento")
 public class Documento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "cpf")
     private String cpf;
+    @Column(name = "identidade")
     private String identidade;
+    @Column(name = "cnpj")
     private String cnpj;
 }

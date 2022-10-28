@@ -2,6 +2,7 @@ package com.example.projetointegrador.models;
 
 import lombok.*;
 
+import javax.naming.Name;
 import javax.persistence.*;
 import java.util.Date;
 @Entity
@@ -9,14 +10,19 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Table(name = "Carteira")
+@Table(name = "carteira")
 public class Carteira {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
+    @Column(name = "id")
+    private Long id;
+    @Column(name = "nome")
     private String nome;
+    @Column(name = "saldo")
     private Double saldo;
+    @Column(name = "dataInicioInvestimento")
     private Date dataInicioInvestimento;
+    @Column(name = "dataTerminoInvestimento")
     private Date dataTerminoInvestimento;
 
 
