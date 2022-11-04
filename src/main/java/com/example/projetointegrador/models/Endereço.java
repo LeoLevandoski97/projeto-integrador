@@ -16,7 +16,7 @@ import javax.persistence.*;
 public class Endereço {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_enderco")
     private Long id;
     @Column(name = "logradouro")
     private String logradouro;
